@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Väderprognos</title>
+  </head>
+  <body>
+    <main>
+      <h1>väderprognos</h1>
+
+      <div class="place-container">
+        <div class="country-box" id="country">Sverige</div>
+        <div class="city-box" id="city">Helsingborg</div>
+      </div>
+      <div class="info-container">
+        <div class="current-time-date-container">
+          <div class="current-time" id="current-time">
+            11:30 <span id="am-pm">PM</span>
+          </div>
+          <div class="current-date" id="current-date">Monday, 19 May</div>
+        </div>
+
+        <div class="current-weather-prognos-container">
+          <img
+            src="https://img.icons8.com/clouds/512/temperature.png"
+            width="140px"
+            alt="weather icon"
+            class="weather-icon"
+          />
+          <div class="temperature-celcius-container">
+            <div>Aktuel temperatur celsius</div>
+            <div class="temp-celsius" id="temp-celsius">18&#176; C</div>
+          </div>
+          <div class="temperature-fahrenheit-container">
+            <div>Aktuel temperatur fahrenheit</div>
+            <div class="temp-fahrenheit" id="temp-fahrenheit">64,4&#176; F</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
