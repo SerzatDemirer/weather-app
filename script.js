@@ -56,12 +56,13 @@ function getCurrentTemp() {
   )
     .then((res) => res.json())
     .then(function (data) {
-      console.log(data);
-      temp-celsius.value = data.main.temp;
-      showTemperature(data);
+      // console.log(data.main.temp);
+
+      showTemperature(data.main.temp);
     });
 }
 
 function showTemperature(data) {
-  tempElement.innerHTML = `${weather.celcius}18&#176; C`;
+  let roundetTemperature = Math.round(data);
+  tempElement.innerHTML = `${roundetTemperature}&#176; C`;
 }
