@@ -42,3 +42,26 @@ setInterval(() => {
   timeElement.innerHTML = hours + ":" + minutes;
   dateElement.innerHTML = days[day] + "," + " " + date + " " + months[month];
 }, 1000);
+
+const tempElement = document.querySelector(".temp-celsius");
+
+getCurrentTemp();
+
+function getCurrentTemp() {
+  let apiKey = "89b03fb69db0a881d3b9274015f1da99";
+  let latitude = 56.0362966;
+  let longitude = 12.7585506;
+  fetch(
+    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`
+  )
+    .then((res) => res.json())
+    .then(function (data) {
+      console.log(data);
+      temp-celsius.value = data.main.temp;
+      showTemperature(data);
+    });
+}
+
+function showTemperature(data) {
+  tempElement.innerHTML = `${weather.celcius}18&#176; C`;
+}
