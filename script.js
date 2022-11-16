@@ -40,6 +40,7 @@ setInterval(() => {
   let hours = time.getHours();
   let minutes = time.getMinutes();
   let seconds = time.getSeconds();
+  hours = checkTime(hours);
   minutes = checkTime(minutes);
   seconds = checkTime(seconds);
   timeElement.innerHTML = hours + ":" + minutes + ":" + seconds;
